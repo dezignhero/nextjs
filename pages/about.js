@@ -10,8 +10,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className="text-5xl font-bold">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 className={styles.title}>
+          About Page
         </h1>
 
         <p className={styles.description}>
@@ -20,9 +20,9 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/about" className={styles.card}>
-            <h3>About Page &rarr;</h3>
-            <p>Go to second page</p>
+          <a href="/" className={styles.card}>
+            <h3>Go back home &rarr;</h3>
+            <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
