@@ -45,9 +45,9 @@ export default function Mentions() {
 
   return (
     <>
-      {mentions.map((mention) => {
+      {mentions.map((mention, i) => {
         return (
-          <div className="mention">
+          <div className="mention" key={i}>
             <a href={mention.url} className="mention-link" target="_blank">
               <img src={mention.image} alt={mention.source}></img>
             </a>
