@@ -113,7 +113,7 @@ Mobile Styling (<768px)
 
     &.bg-flooring {
       @apply bg-bottom;
-      background-image: url('/images/homepagesite/backgrounds/bg-triangle-green.svg');
+      background-image: url('/images/backgrounds/bg-triangle-green.svg');
       background-size: auto 80%;
     }
 
@@ -148,7 +148,7 @@ Mobile Styling (<768px)
 
   &.section-story {
     @apply bg-steel-lightest bg-fixed text-center py-12;
-    background-image: url('/images/homepagesite/backgrounds/bg-constellation.svg');
+    background-image: url('/images/backgrounds/bg-constellation.svg');
 
     h2 {
       @apply font-semibold text-2xl mb-6;
@@ -161,7 +161,7 @@ Mobile Styling (<768px)
 
   &.section-quotes {
     @apply bg-bottom bg-no-repeat bg-cover bg-fixed px-3;
-    background-image: url('/images/homepagesite/backgrounds/bg-mountains.svg');
+    background-image: url('/images/backgrounds/bg-mountains.svg');
 
     .container {
       @apply block;
