@@ -1,0 +1,158 @@
+/* For Parallax */
+.easeBox {
+    will-change: transform;
+    transform: translateY(var(--ty));
+}
+.rotateBox {
+    will-change: transform;
+    transform: rotate(var(--r));
+}
+.fadeBox {
+    will-change: transform;
+    opacity: var(--o);
+}
+.directBox {
+    will-change: transform;
+    opacity: var(--o);
+}
+
+/* Appflow Section */
+.section {
+    &.section-app {
+        @apply bg-white py-12;
+
+        .container {
+            @apply block;
+        }
+
+        .intro {
+            @apply mb-12;
+
+            h2 {
+                @apply text-2xl font-bold text-center;
+            }
+        }
+
+        .appflow {
+            @apply flex flex-col-reverse mb-6;
+
+            &:last-child {
+                @apply mb-0;
+            }
+
+            .control {
+                @apply hidden cursor-pointer;
+
+                img:hover {
+                    filter: hue-rotate(90deg) brightness(10%) grayscale(10%);
+                }
+            }
+
+            .left-col {
+                @apply bg-navy-darker p-6;
+
+                .content {
+                    h3 {
+                        @apply text-lg text-white font-semibold mb-3;
+                    }
+
+                    p {
+                        @apply text-base text-gray-lighter mb-4;
+
+                        &:last-child {
+                            @apply mb-0;
+                        }
+                    }
+
+                    .page-indicator {
+                        @apply px-4 py-2 mt-4 rounded-full text-gray-lightest bg-navy-light font-semibold;
+                    }
+                }
+            }
+
+            .right-col {
+                img {
+                    @apply block w-full mx-auto;
+                }
+            }
+        }
+    }
+}
+
+/****************************************************************
+Desktop Styling (>768px)
+****************************************************************/
+
+@screen md {
+    .section {
+        &.section-app {
+            .intro {
+                h2 {
+                    @apply text-3xl mt-4;
+                }
+            }
+
+            .appflow {
+                @apply flex flex-row flex-wrap h-screen;
+
+                .control {
+                    @apply block mx-auto;
+
+                    img {
+                        @apply block transform;
+                    }
+
+                    &.next {
+                        @apply pb-8;
+                        img {
+                            @apply rotate-90;
+                        }
+                    }
+
+                    &.prev {
+                        @apply pt-8;
+                        margin-top: -27px;
+
+                        img {
+                            @apply -rotate-90;
+                        }
+                    }
+                }
+
+                .left-col {
+                    @apply flex items-center justify-between bg-transparent p-0;
+                    width: 40%;
+                    min-height: 480px;
+
+                    .content {
+                        @apply text-left;
+
+                        .accent {
+                            @apply border-l-4 border-green px-6;
+                        }
+
+                        h3 {
+                            @apply text-2xl text-black;
+                        }
+
+                        p {
+                            @apply text-lg text-black;
+                        }
+
+                        .page-indicator {
+                            @apply px-6 py-3 mt-8 -ml-6 text-gray-dark bg-gray-lightest;
+                        }
+                    }
+                }
+
+                .right-col {
+                    @apply flex-1 flex items-center justify-end;
+
+                    img {
+                        @apply w-auto mt-6;
+                    }
+                }
+            }
+        }
+    }
+}

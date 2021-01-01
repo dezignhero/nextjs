@@ -1,0 +1,127 @@
+/****************************************************************
+Mobile Styling (<768px)
+****************************************************************/
+
+#page-borrowers {
+    @apply bg-purple;
+
+    .section {
+        &.section-banner {
+            @apply bg-purple text-white;
+        }
+
+        &.section-info {
+            @apply bg-navy-darker;
+        }
+
+        &.section-more {
+            @apply py-12 bg-white border-t border-gray-lightest;
+
+            .container {
+                @apply block;
+            }
+
+            .content {
+                @apply text-center;
+
+                h2 {
+                    @apply text-2xl mb-4 font-bold;
+                }
+
+                p {
+                    @apply mb-4;
+                }
+            }
+
+            .articles {
+                .article {
+                    @apply flex p-4 items-center;
+
+                    img {
+                        @apply block flex-shrink-0 h-12 mr-3; /* IE11 flex shrink fix */
+                    }
+
+                    h3 {
+                        @apply font-semibold;
+                    }
+                }
+            }
+        }
+
+        &.section-convert {
+            @apply bg-navy-darker;
+        }
+    }
+} /* end .page-home */
+
+/****************************************************************
+Desktop Styling (>768px)
+****************************************************************/
+
+@screen md {
+    body#body-borrowers {
+        @apply bg-purple;
+
+        #navigation {
+            .menu-desktop {
+                .menu-links {
+                    li {
+                        a {
+                            @apply text-gray-lightest;
+
+                            &:hover {
+                                @apply text-white border-green;
+                            }
+
+                            &.active {
+                                @apply border-green-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #page-borrowers {
+        .section {
+            &.section-more {
+                .content {
+                    @apply max-w-screen-md mx-auto mb-6;
+
+                    h2 {
+                        @apply text-3xl;
+                    }
+                }
+
+                .articles {
+                    @apply flex flex-wrap max-w-screen-md mx-auto mb-6;
+
+                    .article {
+                        @apply w-1/2;
+
+                        h3 {
+                            @apply text-lg;
+                        }
+
+                        img {
+                            @apply opacity-75;
+                        }
+
+                        &:hover {
+                            img {
+                                @apply opacity-100;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.section-convert {
+                .col-image {
+                    @apply pr-12;
+                }
+            }
+        }
+    }
+}

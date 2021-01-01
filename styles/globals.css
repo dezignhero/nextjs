@@ -1,4 +1,23 @@
 /* ./styles/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* @import '../sass/fonts/_tofino.scss'; */
+
+@import './components/navigation.scss';
+@import './components/footer.scss';
+@import './components/typography.scss';
+@import './components/button.scss';
+@import './components/common.scss';
+@import './components/animations.scss';
+@import './components/section.scss';
+@import './components/appflow.scss';
+@import './components/faders.scss';
+
+
+@import './pages/home.scss';
+@import './pages/partner.scss';
+@import './pages/borrowers.scss';
+@import './pages/about.scss';
+@import './pages/press.scss';

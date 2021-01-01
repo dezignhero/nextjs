@@ -1,0 +1,132 @@
+.fader {
+    .slide {
+        @apply w-full h-0 overflow-hidden opacity-0;
+        transition: opacity 0.5s ease-in;
+
+        &.active {
+            @apply h-full opacity-100;
+        }
+    }
+}
+
+.fader-quotes {
+    @apply relative;
+
+    .control {
+        @apply absolute cursor-pointer z-10;
+        top: calc(50% - 60px);
+        width: 30px;
+
+        img {
+            @apply block mx-auto;
+
+            &:hover {
+                filter: hue-rotate(90deg) brightness(10%) grayscale(10%);
+            }
+        }
+
+        &.next {
+            right: 5px;
+        }
+
+        &.prev {
+            left: 5px;
+        }
+    }
+
+    .pagination {
+        @apply pt-6;
+    }
+
+    .slides {
+        @apply bg-white shadow-md rounded-sm;
+
+        .slide {
+            @apply relative text-center;
+
+            .wrapper {
+                @apply flex flex-col justify-between h-full px-12 py-8;
+            }
+
+            .avatar {
+                @apply mt-2 mb-7;
+
+                img {
+                    @apply block mx-auto;
+                    max-height: 84px;
+                    max-width: 180px;
+
+                    &.profile {
+                        @apply rounded-full;
+                    }
+                }
+            }
+
+            .quote {
+                @apply font-serif text-sm text-steel-darker italic mb-6;
+            }
+
+            .user-info {
+                @apply border-t border-gray-lightest pt-4;
+
+                .name {
+                    @apply font-serif text-lg text-steel-darker font-semibold;
+                }
+
+                .details {
+                    @apply text-xs uppercase text-gray-lighter font-semibold;
+                }
+            }
+        }
+    }
+}
+
+/****************************************************************
+Desktop Styling (>768px)
+****************************************************************/
+
+@screen md {
+    .fader-quotes {
+        .control {
+            &.next {
+                right: -40px;
+            }
+
+            &.prev {
+                left: -40px;
+            }
+        }
+
+        .slides {
+            @apply overflow-y-hidden;
+            height: 450px;
+
+            .slide {
+                .wrapper {
+                    @apply px-10;
+                }
+
+                .avatar {
+                    img {
+                        max-height: 96px;
+                        max-width: 220px;
+                    }
+                }
+
+                .quote {
+                    @apply text-base;
+                }
+
+                .user-info {
+                    .name {
+                        @apply text-xl;
+                    }
+
+                    .details {
+                        @apply text-base;
+                    }
+                }
+            }
+        }
+    }
+}

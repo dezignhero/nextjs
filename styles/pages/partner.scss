@@ -1,0 +1,104 @@
+/****************************************************************
+Mobile Styling (<768px)
+****************************************************************/
+
+#page-partner {
+    @apply bg-green-dark;
+
+    .section {
+        &.section-banner {
+            @apply bg-green-dark text-white;
+        }
+
+        &.section-facts {
+            @apply bg-steel-lightest py-12;
+
+            .container {
+                @apply block;
+            }
+
+            h2 {
+                @apply font-semibold text-2xl text-navy-darker mb-4 text-center;
+            }
+
+            .slides {
+                @apply text-center mb-6;
+                height: 100px;
+
+                .slide {
+                    @apply flex items-center;
+
+                    p {
+                        @apply mx-auto mb-4;
+
+                        &:last-child {
+                            @apply mb-0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.section-convert {
+            background-color: #2d5575;
+        }
+    }
+} /* end .page-partner */
+
+/****************************************************************
+Desktop Styling (>768px)
+****************************************************************/
+
+@screen md {
+    body#body-partner {
+        @apply bg-green-dark;
+
+        #navigation {
+            .menu-desktop {
+                .menu-links {
+                    li {
+                        a {
+                            @apply text-gray-lightest;
+
+                            &:hover {
+                                @apply text-white border-navy-darker;
+                            }
+
+                            &.active {
+                                @apply border-navy-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #page-partner {
+        .fader-quotes .slides {
+            height: 500px;
+        }
+
+        .section {
+            &.section-facts {
+                .row {
+                    @apply max-w-screen-md mx-auto;
+                }
+
+                h2 {
+                    @apply text-3xl;
+                }
+
+                .slides {
+                    height: 80px;
+                }
+            }
+
+            &.section-convert {
+                .col-image {
+                    @apply pr-12;
+                }
+            }
+        }
+    }
+}

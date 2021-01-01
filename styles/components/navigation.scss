@@ -1,0 +1,200 @@
+/* This is for mobile menu - padding top for fixed menu to prevent jump */
+.page {
+  padding-top: 52px;
+}
+
+/* This is for mobile menu - freeze body to prevent scrolling when menu is open */
+html,
+body {
+  &.freeze {
+    @apply relative overflow-y-hidden h-screen;
+
+    .overlay-freeze {
+      @apply block cursor-pointer;
+    }
+  }
+}
+
+#navigation {
+  .nav-desktop {
+    .container {
+      @apply items-center justify-between hidden;
+      height: 96px;
+    }
+
+    .logo {
+      @apply -mt-2;
+      height: 32px;
+
+      img {
+        @apply block h-full;
+      }
+    }
+  }
+
+  .menu-desktop {
+    @apply flex items-center;
+
+    .menu-links {
+      @apply flex -mr-6;
+
+      li {
+        @apply h-full font-semibold px-6 text-sm;
+
+        a {
+          @apply text-gray-darker block no-underline;
+          line-height: 44px;
+
+          &.active,
+          &:hover {
+            @apply border-b-4;
+            margin-bottom: -4px;
+          }
+
+          &:hover {
+            @apply text-black border-green;
+          }
+
+          &.active {
+            @apply border-green-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-mobile {
+    @apply block fixed z-50 w-full;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+
+    /* Used for animation */
+    &.offscreen {
+      transform: translate3d(0, -53px, 0);
+    }
+
+    /* Used for animation */
+    &.menu-open {
+      @apply h-0;
+
+      .menu-mobile {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .menu-header {
+        transform: translate3d(0, -53px, 0);
+      }
+    }
+
+    .menu-header {
+      @apply flex justify-between items-center bg-white border-gray-lighter shadow;
+      border-width: 0 0 1px;
+      transition: transform 0.3s ease-in-out;
+      height: 52px;
+
+      .logo {
+        @apply block pl-3;
+        height: 28px;
+
+        img {
+          @apply block h-full;
+        }
+      }
+
+      .button-menu {
+        @apply text-navy p-2 mr-2;
+
+        &:hover {
+          @apply text-navy-dark;
+        }
+      }
+    }
+
+    .menu-mobile {
+      @apply fixed top-0 left-0 z-50 h-screen overflow-y-scroll bg-gray-lightest p-6 pt-12;
+      width: calc(100vw - 80px);
+      transform: translate3d(-120vw, 0, 0);
+      transition: transform 0.3s ease-in-out;
+
+      .button-close {
+        @apply absolute;
+        top: 16px;
+        right: 16px;
+
+        /*
+				&:hover {
+					svg {
+						filter: invert(100%) sepia(4%) saturate(7%) hue-rotate(218deg) brightness(103%) contrast(101%);
+					}
+				}
+				*/
+      }
+
+      .menu-links {
+        @apply py-4;
+
+        li {
+          @apply block font-semibold text-sm;
+
+          a {
+            @apply block text-gray-darker no-underline py-3;
+            transition: padding 0.3s ease-in-out;
+
+            &:hover {
+              @apply text-green-dark rounded-sm pl-4;
+              background-color: rgba(0, 0, 0, 0.1);
+            }
+          }
+        }
+
+        &.menu-legal {
+          @apply border-t border-green-dark;
+        }
+      }
+
+      .request-invite {
+        @apply border-t border-gray-lighter pt-4;
+
+        p {
+          @apply text-sm text-gray;
+        }
+      }
+    }
+  }
+}
+
+@screen lg {
+  #navigation {
+    .nav-desktop {
+      .container {
+        @apply px-8 max-w-none;
+      }
+    }
+  }
+}
+
+@screen md {
+  .page {
+    @apply pt-0;
+  }
+
+  body.freeze {
+    @apply overflow-y-scroll;
+
+    &:before {
+      @apply hidden;
+    }
+  }
+
+  #navigation {
+    .nav-desktop {
+      .container {
+        @apply flex;
+      }
+    }
+
+    .nav-mobile {
+      @apply hidden;
+    }
+  }
+}

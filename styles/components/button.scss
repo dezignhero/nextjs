@@ -1,0 +1,35 @@
+.button {
+    @apply px-6 py-3 font-semibold rounded;
+
+    &.button-orange {
+        @apply bg-orange text-white;
+
+        &:hover {
+            @apply bg-orange-saturated;
+        }
+    }
+
+    &.button-green {
+        @apply bg-green text-white;
+
+        &:hover {
+            @apply bg-green-dark;
+        }
+    }
+
+    &.button-navy {
+        @apply bg-navy-dark text-white;
+
+        &:hover {
+            @apply bg-navy;
+        }
+    }
+
+    &.button-pink {
+        @apply bg-pink-dark text-white;
+
+        &:hover {
+            @apply bg-pink-darker;
+        }
+    }
+}

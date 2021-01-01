@@ -1,0 +1,61 @@
+@mixin mx-pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulse {
+    @include mx-pulse;
+}
+
+@-webkit-keyframes pulse {
+    @include mx-pulse;
+}
+
+.anim-pulse {
+    -webkit-animation: pulse 3s infinite ease-in-out;
+    -o-animation: pulse 3s infinite ease-in-out;
+    -ms-animation: pulse 3s infinite ease-in-out;
+    -moz-animation: pulse 3s infinite ease-in-out;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@mixin mx-scroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 0;
+    }
+    25% {
+        transform: translate3d(0, 8px, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, 32px, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    @include mx-scroll;
+}
+
+@-webkit-keyframes scroll {
+    @include mx-scroll;
+}
+
+.anim-scroll {
+    -webkit-animation: scroll 2s infinite linear;
+    -o-animation: scroll 2s infinite linear;
+    -ms-animation: scroll 2s infinite linear;
+    -moz-animation: scroll 2s infinite linear;
+    animation: scroll 2s infinite linear;
+}

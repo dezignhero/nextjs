@@ -1,0 +1,38 @@
+body {
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div,
+p,
+input[type='text'],
+textarea,
+select {
+    @apply font-normal;
+}
+
+.link {
+    @apply text-navy;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply leading-tight font-semibold;
+}
+
+/****************************************************************
+Larger Styling (>640px)
+****************************************************************/
+
+@screen sm {
+    body {
+        font-size: 16px;
+    }
+}

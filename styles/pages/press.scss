@@ -1,0 +1,216 @@
+/****************************************************************
+Mobile Styling (<768px)
+****************************************************************/
+
+#page-press {
+    .section {
+        &.section-story {
+            h2 {
+                @apply text-steel-darker;
+            }
+        }
+
+        &.section-news {
+            @apply py-12;
+
+            .container {
+                @apply block;
+            }
+
+            h2 {
+                @apply block w-full mb-6 text-2xl font-semibold;
+            }
+
+            .tiles {
+                .tile {
+                    @apply flex-1 my-4 text-white bg-gray-lighter;
+
+                    .content {
+                        @apply block w-full h-full text-gray-lightest relative bg-no-repeat bg-center bg-cover;
+                        height: 240px;
+
+                        .overlay {
+                            @apply absolute z-10 flex flex-col justify-between w-full h-full p-4;
+                            background-color: rgba(0, 0, 0, 0.35);
+
+                            .date {
+                                @apply font-semibold text-sm bg-left bg-no-repeat pl-6;
+                                background-image: url('/images/homepagesite/icons/clock.svg');
+                            }
+
+                            .title {
+                                @apply font-semibold;
+                            }
+                        }
+
+                        &:hover {
+                            @apply text-white no-underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.section-press {
+            @apply py-12 border-t border-gray-lightest;
+
+            .container {
+                @apply block;
+            }
+
+            h2 {
+                @apply block w-full mb-6 text-2xl font-semibold;
+            }
+
+            .tiles {
+                .tile {
+                    @apply my-4;
+
+                    .content {
+                        @apply flex items-end p-4 border-steel-lightest border-12 bg-no-repeat;
+                        background-position: center 33%;
+                        height: 240px;
+
+                        .title {
+                            .source {
+                                @apply block text-xs text-orange uppercase;
+                            }
+
+                            h3 {
+                                @apply text-gray-darker font-semibold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.section-subscribe {
+            @apply bg-navy-light text-center text-white py-12;
+
+            .col-left {
+                @apply border-b-2 border-green pb-4 mb-4;
+
+                h2 {
+                    @apply text-2xl font-bold;
+                }
+            }
+
+            .col-right {
+                @apply flex-1;
+
+                .content {
+                    @apply pb-1;
+
+                    p {
+                        @apply mb-4;
+                    }
+
+                    form {
+                        @apply w-full;
+
+                        input {
+                            @apply block w-full text-center mb-2 text-black px-6 p-2 text-lg bg-white rounded;
+                        }
+
+                        button {
+                            @apply block w-full px-8 p-2 bg-pink-dark text-white font-semibold uppercase rounded;
+
+                            &:hover {
+                                @apply bg-pink-darker;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} /* end .page-home */
+
+/****************************************************************
+Desktop Styling (>768px)
+****************************************************************/
+
+@screen md {
+    #page-press {
+        .section {
+            &.section-news {
+                h2 {
+                    @apply text-3xl;
+                }
+
+                .tiles {
+                    @apply flex flex-wrap -mx-2;
+
+                    .tile {
+                        @apply mx-2 my-2;
+
+                        .content {
+                            height: 320px;
+                        }
+                    }
+                }
+            }
+
+            &.section-press {
+                h2 {
+                    @apply text-3xl;
+                }
+
+                .tiles {
+                    @apply flex flex-wrap -mx-2;
+
+                    .tile {
+                        @apply w-1/3 my-0 p-2;
+
+                        .content {
+                            height: 320px;
+                        }
+                    }
+                }
+            }
+
+            &.section-subscribe {
+                @apply text-left;
+
+                .container {
+                    @apply w-3/5;
+                }
+
+                .col-left {
+                    @apply text-right border-b-0 border-r-3 pb-0 mb-0 pr-6 mr-6;
+                    display: flex; /* Edge */
+                    max-width: 200px;
+
+                    h2 {
+                        @apply text-3xl block;
+                    }
+                }
+
+                .col-right {
+                    @apply flex flex-col flex-1 justify-center;
+
+                    .content {
+                        @apply pb-1;
+
+                        p {
+                            @apply mb-4;
+                        }
+
+                        form {
+                            @apply flex;
+
+                            input {
+                                @apply w-auto flex-1 rounded-r-none bg-white mb-0 text-left;
+                            }
+
+                            button {
+                                @apply w-auto inline-block px-8 rounded-l-none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
