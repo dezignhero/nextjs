@@ -1,8 +1,43 @@
+import Head from 'next/head'
 import Layout from '../layouts/default.js'
+import Mentions from '../components/mentions.js'
+
+const quotes = [
+  {
+    name: 'Jen',
+    description: 'Marketing Executive, Washington',
+    avatar: 'images/homepagesite/content/quote-jen.jpg',
+    profile: true,
+    term: 'users',
+    quote:
+      'I call it my second mortgage... hundreds of thousands of dollars of student debt. Given my background in marketing and tech, I was super impressed with the user experience and ease of use.',
+  },
+  {
+    name: 'Kerry Ryan',
+    description: 'Benefits Director, Boston Medical Center',
+    avatar: 'images/homepagesite/logos/vendors/boston-medical.png',
+    term: 'partners',
+    quote:
+      'The program helps employees achieve meaningful savings both in their monthly budgets and in the overall cost of their college debt. An employee told us she was struggling to pay her rent but now she has that burden lifted. It’s really life changing!',
+  },
+  {
+    name: 'Nancy',
+    description: 'Retired Middle School Teacher, New Jersey',
+    avatar: 'images/homepagesite/content/quote-nancy.jpg',
+    profile: true,
+    term: 'users',
+    quote:
+      "I taught for 30 years. I’m financially not in great shape. I just kept pushing the loans off but you can't keep pushing them off, they're federal loans. It was all overwhelming at first, but Savi showed me it's not scary. I now know what my payments are going to be and lowered them to my realm of reality.",
+  },
+]
 
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>Home</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <div id="page-home" className="page">
         <div className="section section-banner">
           <div className="container">
@@ -31,7 +66,9 @@ export default function Home() {
         </div>
 
         <div className="section section-mentions">
-          <div className="container"></div>
+          <div className="container">
+            <Mentions />
+          </div>
         </div>
 
         <div className="section section-intro">
@@ -234,34 +271,9 @@ export default function Home() {
               </h2>
             </div>
             <div className="col-right">
-              {/* @php
-				$quotes = [
-					array(
-						'name' => "Jen",
-						'description' => "Marketing Executive, Washington",
-						'avatar' => "images/homepagesite/content/quote-jen.jpg",
-						'profile' => true,
-						'term' => 'users',
-						'quote' => "I call it my second mortgage... hundreds of thousands of dollars of student debt. Given my background in marketing and tech, I was super impressed with the user experience and ease of use."
-					),
-					array(
-						'name' => "Kerry Ryan",
-						'description' => "Benefits Director, Boston Medical Center",
-						'avatar' => "images/homepagesite/logos/vendors/boston-medical.png",
-						'term' => 'partners',
-						'quote' => "The program helps employees achieve meaningful savings both in their monthly budgets and in the overall cost of their college debt. An employee told us she was struggling to pay her rent but now she has that burden lifted. It’s really life changing!"
-					),
-					array(
-						'name' => "Nancy",
-						'description' => "Retired Middle School Teacher, New Jersey",
-						'avatar' => "images/homepagesite/content/quote-nancy.jpg",
-						'profile' => true,
-						'term' => 'users',
-						'quote' => "I taught for 30 years. I’m financially not in great shape. I just kept pushing the loans off but you can't keep pushing them off, they're federal loans. It was all overwhelming at first, but Savi showed me it's not scary. I now know what my payments are going to be and lowered them to my realm of reality."
-					)
-				];
-			@endphp
-			@include('homepagesite.components.quotes_slider', ['slides' => $quotes]) */}
+              {
+                // @include('homepagesite.components.quotes_slider', ['slides': $quotes])
+              }
             </div>
           </div>
         </div>
