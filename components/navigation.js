@@ -1,4 +1,31 @@
+import { useRouter } from 'next/router'
+
+const links = [
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Partner',
+    href: '/partner',
+  },
+  {
+    label: 'Borrowers',
+    href: '/borrowers',
+  },
+  {
+    label: 'Press',
+    href: '/press',
+  },
+]
+
 export default function Navigation() {
+  const router = useRouter()
+
   return (
     <nav id="navigation">
       <div className="nav-desktop">
@@ -8,10 +35,16 @@ export default function Navigation() {
           </a>
           <div className="menu-desktop">
             <ul className="menu-links">
-              <li><a className="active" href="/about">About</a></li>
-              <li><a className="active" href="/partner">Partner</a></li>
-              <li><a className="active" href="/borrowers">Borrowers</a></li>
-              <li><a className="active" href="/press">Press</a></li>
+              {links.slice(1).map((link, i) => {
+                const className = router.pathname == link.href ? 'active' : ''
+                return (
+                  <li key={i}>
+                    <a className={className} href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>
@@ -22,9 +55,13 @@ export default function Navigation() {
             <img alt="brand" src="/images/logos/savi/savi-default.svg"></img>
           </a>
           <button className="button-menu">
-            <svg className="fill-current h-6 w-6" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              className="fill-current h-6 w-6"
+              viewBox="0 0 18 18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
         </div>
@@ -36,15 +73,23 @@ export default function Navigation() {
             </svg>
           </button>
           <ul className="menu-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/partner">Partner</a></li>
-            <li><a href="/borrowers">Borrowers</a></li>
-            <li><a href="/press">Press</a></li>
+            {links.map((link, i) => {
+              return (
+                <li key={i}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              )
+            })}
           </ul>
           <div className="request-invite">
             <p>
-              Want to try Savi? - <a className="inline-block" href="https://bysavi.typeform.com/to/iIUJpT">Request an invite</a>
+              Want to try Savi? -
+              <a
+                className="inline-block"
+                href="https://bysavi.typeform.com/to/iIUJpT"
+              >
+                Request an invite
+              </a>
             </p>
           </div>
         </div>

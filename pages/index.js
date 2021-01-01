@@ -1,12 +1,20 @@
-import Head from 'next/head'
 import Layout from '../layouts/default.js'
 import Mentions from '../components/mentions.js'
+import QuotesSlider from '../components/quotes-slider.js'
+
+const meta = {
+  title: 'Save Time and Money On Student Loans with Savi',
+  description:
+    'Savi is solving the student debt crisis with automated tools to enroll you in over 150 federal and state programs to save you money, and get maximum loan forgiveness.',
+  image: '/images/meta/home.png',
+  url: 'https://www.bysavi.com',
+}
 
 const quotes = [
   {
     name: 'Jen',
     description: 'Marketing Executive, Washington',
-    avatar: 'images/homepagesite/content/quote-jen.jpg',
+    avatar: '/images/content/quote-jen.jpg',
     profile: true,
     term: 'users',
     quote:
@@ -15,7 +23,7 @@ const quotes = [
   {
     name: 'Kerry Ryan',
     description: 'Benefits Director, Boston Medical Center',
-    avatar: 'images/homepagesite/logos/vendors/boston-medical.png',
+    avatar: '/images/logos/vendors/boston-medical.png',
     term: 'partners',
     quote:
       'The program helps employees achieve meaningful savings both in their monthly budgets and in the overall cost of their college debt. An employee told us she was struggling to pay her rent but now she has that burden lifted. It’s really life changing!',
@@ -23,7 +31,7 @@ const quotes = [
   {
     name: 'Nancy',
     description: 'Retired Middle School Teacher, New Jersey',
-    avatar: 'images/homepagesite/content/quote-nancy.jpg',
+    avatar: '/images/content/quote-nancy.jpg',
     profile: true,
     term: 'users',
     quote:
@@ -33,11 +41,7 @@ const quotes = [
 
 export default function Home() {
   return (
-    <Layout>
-      <Head>
-        <title>Home</title>
-        <meta property="og:title" content="My page title" key="title" />
-      </Head>
+    <Layout meta={meta}>
       <div id="page-home" className="page">
         <div className="section section-banner">
           <div className="container">
@@ -119,7 +123,7 @@ export default function Home() {
                   <picture>
                     <source
                       media="(min-width: 768px)"
-                      srcset="images/graphics/homepage-how-1.svg"
+                      srcSet="images/graphics/homepage-how-1.svg"
                     ></source>
                     <img
                       className="easeBox fadeBox"
@@ -146,7 +150,7 @@ export default function Home() {
                   <picture>
                     <source
                       media="(min-width: 768px)"
-                      srcset="images/graphics/homepage-how-2.svg"
+                      srcSet="images/graphics/homepage-how-2.svg"
                     ></source>
                     <img
                       className="easeBox fadeBox"
@@ -173,7 +177,7 @@ export default function Home() {
                   <picture>
                     <source
                       media="(min-width: 768px)"
-                      srcset="images/graphics/homepage-how-3.svg"
+                      srcSet="images/graphics/homepage-how-3.svg"
                     ></source>
                     <img
                       className="easeBox fadeBox"
@@ -192,7 +196,7 @@ export default function Home() {
             <div className="content">
               <h2>Find a Path to Student Loan Freedom</h2>
               <p>
-                Savi identifies the best loan repayment & forgiveness programs
+                Savi identifies the best loan repayment &amp; forgiveness programs
                 based on each user's unique financial picture and goals.
               </p>
             </div>
@@ -212,7 +216,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="col col-image">
-                <img src="/images/graphics/path.svg')}}" alt="path"></img>
+                <img src="/images/graphics/path.svg" alt="path"></img>
               </div>
               <div className="col">
                 <h3>Your Loan With Savi</h3>
@@ -271,9 +275,7 @@ export default function Home() {
               </h2>
             </div>
             <div className="col-right">
-              {
-                // @include('homepagesite.components.quotes_slider', ['slides': $quotes])
-              }
+              <QuotesSlider slides={quotes} />
             </div>
           </div>
         </div>
@@ -284,7 +286,7 @@ export default function Home() {
               <picture>
                 <source
                   media="(min-width: 768px)"
-                  srcset="images/graphics/startup.svg"
+                  srcSet="images/graphics/startup.svg"
                 ></source>
                 <img
                   className="easeBox fadeBox"
