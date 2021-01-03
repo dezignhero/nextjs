@@ -3,11 +3,11 @@ import Mentions from '../components/mentions.js'
 import QuotesSlider from '../components/quotes-slider.js'
 
 const meta = {
-  title: 'Save Time and Money On Student Loans with Savi',
+  title: 'About Savi Solutions PBC',
   description:
     'Savi is solving the student debt crisis with automated tools to enroll you in over 150 federal and state programs to save you money, and get maximum loan forgiveness.',
-  image: '/images/meta/home.png',
-  url: 'https://www.bysavi.com',
+  image: '/images/meta/about.png',
+  url: 'https://www.bysavi.com/about',
 }
 
 const quotes = [
@@ -39,10 +39,10 @@ const quotes = [
   },
 ]
 
-export default function Home() {
+export default function About() {
   return (
     <Layout meta={meta}>
-      <div id="page-home" className="page">
+      <div id="page-about" className="page">
         <div className="section section-banner">
           <div className="container">
             <div className="content">

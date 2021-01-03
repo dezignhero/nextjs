@@ -3,7 +3,7 @@ import QuotesSlider from '../components/quotes-slider.js'
 import AppFlow from '../components/app-flow.js'
 
 const meta = {
-  title: 'Save Time and Money On Student Loans with Savi',
+  title: 'Partner With Savi',
   description:
     'Savi works with employers, membership groups and financial institutions to provide a transformative student loan benefit. Request a demo today.',
   image: '/images/meta/partner.png',
