@@ -89,7 +89,7 @@ export default function Home() {
                   className="anim-scroll"
                   src="/images/icons/caret-vert.svg"
                   alt="caret vertical"
-                ></img>
+                />
               </p>
             </div>
           </div>
@@ -124,12 +124,12 @@ export default function Home() {
                     <source
                       media="(min-width: 768px)"
                       srcSet="images/graphics/homepage-how-1.svg"
-                    ></source>
+                    />
                     <img
                       className="easeBox fadeBox"
                       src="/images/graphics/homepage-how-1.png"
                       alt="homepage how 1"
-                    ></img>
+                    />
                   </picture>
                 </div>
               </div>
@@ -151,12 +151,12 @@ export default function Home() {
                     <source
                       media="(min-width: 768px)"
                       srcSet="images/graphics/homepage-how-2.svg"
-                    ></source>
+                    />
                     <img
                       className="easeBox fadeBox"
                       src="/images/graphics/homepage-how-2.png"
                       alt="homepage how 2"
-                    ></img>
+                    />
                   </picture>
                 </div>
               </div>
@@ -178,12 +178,12 @@ export default function Home() {
                     <source
                       media="(min-width: 768px)"
                       srcSet="images/graphics/homepage-how-3.svg"
-                    ></source>
+                    />
                     <img
                       className="easeBox fadeBox"
                       src="/images/graphics/homepage-how-3.png"
                       alt="homepage how 3"
-                    ></img>
+                    />
                   </picture>
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="col col-image">
-                <img src="/images/graphics/path.svg" alt="path"></img>
+                <img src="/images/graphics/path.svg" alt="path"/>
               </div>
               <div className="col">
                 <h3>Your Loan With Savi</h3>
@@ -287,12 +287,12 @@ export default function Home() {
                 <source
                   media="(min-width: 768px)"
                   srcSet="images/graphics/startup.svg"
-                ></source>
+                />
                 <img
                   className="easeBox fadeBox"
                   src="/images/graphics/startup-mobile.png"
                   alt="startup mobile"
-                ></img>
+                />
               </picture>
             </div>
             <div className="content">
