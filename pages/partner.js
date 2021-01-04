@@ -1,6 +1,6 @@
 import Layout from '../layouts/default.js'
 import QuotesSlider from '../components/quotes-slider.js'
-import AppFlow from '../components/app-flow.js'
+import AppFlow from '../components/appflow.js'
 
 const meta = {
   title: 'Partner With Savi',

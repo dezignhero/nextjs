@@ -1,5 +1,5 @@
 import Layout from '../layouts/default.js'
-import AppFlow from '../components/app-flow.js'
+import AppFlow from '../components/appflow.js'
 
 const meta = {
   title: 'Learn How to Save with Savi',
@@ -82,11 +82,11 @@ const appSlides = [
 
 export default function Borrowers() {
   return (
-    <Layout meta={meta}>
+    <Layout meta={meta} bodyId="body-borrowers">
       <div id="page-borrowers" className="page">
-        <div class="section section-banner">
-          <div class="container">
-            <div class="content">
+        <div className="section section-banner">
+          <div className="container">
+            <div className="content">
               <h1>For Borrowers</h1>
               <p>
                 Savi provides our tools and resources through hundreds of
@@ -95,7 +95,7 @@ export default function Borrowers() {
               </p>
               <p>
                 <a
-                  class="typeform-share button button-green"
+                  className="typeform-share button button-green"
                   href="https://bysavi.typeform.com/to/iIUJpT"
                   data-mode="popup"
                   target="_blank"
@@ -105,14 +105,14 @@ export default function Borrowers() {
                 </a>
               </p>
             </div>
-            <div class="col-image">
+            <div className="col-image">
               <picture>
                 <source
                   media="(min-width: 768px)"
                   srcSet="/images/graphics/student.svg"
                 />
                 <img
-                  class="fadeBox"
+                  className="fadeBox"
                   src="/images/graphics/student-mobile.png"
                   alt="student"
                 />
@@ -121,13 +121,13 @@ export default function Borrowers() {
           </div>
         </div>
 
-        <div class="section section-info">
-          <div class="container">
-            <div class="row">
-              <div class="col-left">
+        <div className="section section-info">
+          <div className="container">
+            <div className="row">
+              <div className="col-left">
                 <h2>Save Time and Money On Your Student Loans</h2>
               </div>
-              <div class="col-right">
+              <div className="col-right">
                 <p>
                   Savi puts loan borrowers first and is focused on delivering a
                   positive outcome for each user. Understanding and navigating
@@ -141,13 +141,13 @@ export default function Borrowers() {
           </div>
         </div>
 
-        <div class="section section-app">
-          <div class="container">
-            <div class="intro">
-              <h2 class="heading-underline">We Care About Loan Borrowers</h2>
-              <p class="pt-16">
+        <div className="section section-app">
+          <div className="container">
+            <div className="intro">
+              <h2 className="heading-underline">We Care About Loan Borrowers</h2>
+              <p className="pt-16">
                 <img
-                  class="anim-scroll mx-auto"
+                  className="anim-scroll mx-auto"
                   src="/images/icons/caret-vert.svg"
                   alt="caret vertical"
                 />
@@ -157,9 +157,9 @@ export default function Borrowers() {
           </div>
         </div>
 
-        <div class="section section-more">
-          <div class="container">
-            <div class="content">
+        <div className="section section-more">
+          <div className="container">
+            <div className="content">
               <h2>Learn More About Loans</h2>
               <p>
                 Partnering with Student Debt Crisis, the nation's largest
@@ -168,14 +168,15 @@ export default function Borrowers() {
                 complex student loan system.
               </p>
             </div>
-            <div class="articles">
+            <div className="articles">
               {articles.map((article, i) => {
                 return (
                   <a
-                    class="article"
+                    className="article"
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    key={i}
                   >
                     <img src="/images/icons/pdf.svg" alt={article.title} />
                     <h3>{article.title}</h3>
@@ -186,39 +187,39 @@ export default function Borrowers() {
           </div>
         </div>
 
-        <div class="section section-stats">
-          <div class="container">
-            <div class="stat">
+        <div className="section section-stats">
+          <div className="container">
+            <div className="stat">
               <h3>$200+ Million</h3>
               <p>Loan Forgiveness Found</p>
             </div>
-            <div class="stat">
+            <div className="stat">
               <h3>$156</h3>
               <p>Average Payment Reduction</p>
             </div>
-            <div class="stat">
+            <div className="stat">
               <h3>$28,308</h3>
               <p>Average Lifetime Savings</p>
             </div>
           </div>
         </div>
 
-        <div class="section section-convert">
-          <div class="container">
-            <div class="col-image">
+        <div className="section section-convert">
+          <div className="container">
+            <div className="col-image">
               <picture>
                 <source
                   media="(min-width: 768px)"
                   srcSet="/images/graphics/shuttle.svg"
                 />
                 <img
-                  class="fadeBox"
+                  className="fadeBox"
                   src="/images/graphics/shuttle-mobile.png"
                   alt="shuttle"
                 />
               </picture>
             </div>
-            <div class="content">
+            <div className="content">
               <h2>
                 Employees and members, ask your HR leader to register for Savi
               </h2>
@@ -230,7 +231,7 @@ export default function Borrowers() {
               </p>
               <p>
                 <a
-                  class="typeform-share button button-orange"
+                  className="typeform-share button button-orange"
                   href="https://bysavi.typeform.com/to/Ygjr7BD4"
                   target="_blank"
                   rel="noopener noreferrer"

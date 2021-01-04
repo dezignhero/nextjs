@@ -25,13 +25,17 @@ const links = [
 
 export default function Navigation() {
   const router = useRouter()
+  const logoSrc =
+    router.pathname === '/borrowers' || router.pathname === '/partner'
+      ? '/images/logos/savi/savi-white.svg'
+      : '/images/logos/savi/savi-default.svg'
 
   return (
     <nav id="navigation">
       <div className="nav-desktop">
         <div className="container">
           <a className="logo" href="/">
-            <img alt="brand" src="/images/logos/savi/savi-default.svg"></img>
+            <img alt="brand" src={logoSrc}></img>
           </a>
           <div className="menu-desktop">
             <ul className="menu-links">
