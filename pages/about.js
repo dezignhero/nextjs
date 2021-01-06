@@ -31,7 +31,7 @@ export default function About() {
               <picture>
                 <source
                   media="(min-width: 768px)"
-                  srcset="/images/graphics/office.svg"
+                  srcSet="/images/graphics/office.svg"
                 />
                 <img
                   src="/images/graphics/office-mobile.jpg"
@@ -226,7 +226,7 @@ export default function About() {
               <picture>
                 <source
                   media="(min-width: 768px)"
-                  srcset="/images/graphics/jobhunt.svg"
+                  srcSet="/images/graphics/jobhunt.svg"
                 />
                 <img
                   className="easeBox fadeBox"
