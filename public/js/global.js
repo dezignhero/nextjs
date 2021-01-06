@@ -4,7 +4,6 @@ $(document).ready(function () {
   const NavMenu = new NavigationMenu()
 
   // Faders
-  $.fn.fader = Fader
   $('.fader').each(function () {
     $(this).fader()
   })

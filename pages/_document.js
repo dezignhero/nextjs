@@ -20,6 +20,12 @@ class MyDocument extends Document {
         <body id={this.props.bodyId}>
           <Main />
           <NextScript />
+          <script src="/js/vendor/zepto.min.js" crossorigin="anonymous"></script>
+          <script src="/js/vendor/picturefill.min.js" crossorigin="anonymous"></script>
+          <script src="/js/vendor/basicscroll.min.js" crossorigin="anonymous"></script>
+          <script src="/js/fader.js" crossorigin="anonymous"></script>
+          <script src="/js/navigation.js" crossorigin="anonymous"></script>
+          <script src="/js/global.js" crossorigin="anonymous"></script>
         </body>
       </Html>
     )
