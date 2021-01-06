@@ -87,7 +87,7 @@ export default function Navigation() {
           </ul>
           <div className="request-invite">
             <p>
-              Want to try Savi? -
+              <span className="inline-block mr-1">Want to try Savi? -</span>
               <a
                 className="inline-block"
                 href="https://bysavi.typeform.com/to/iIUJpT"
