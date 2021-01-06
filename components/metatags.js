@@ -12,9 +12,9 @@ export default function MetaTags({ meta }) {
       <meta name="description" content={meta.description} />
       <meta name="author" content="Savi" />
 
-      <meta itemprop="name" content={meta.title} />
-      <meta itemprop="description" content={meta.description} />
-      <meta itemprop="image" content={meta.image} />
+      <meta itemProp="name" content={meta.title} />
+      <meta itemProp="description" content={meta.description} />
+      <meta itemProp="image" content={meta.image} />
 
       <meta property="og:title" content={meta.title} />
       <meta
